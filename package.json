@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "ts-node src/index.ts",
     "build": "tsc",
+    "postbuild": "mkdir dist\\schema 2>nul & copy src\\schema\\init.sql dist\\schema\\init.sql >nul",
     "start": "node dist/index.js"
   },
   "keywords": [],
